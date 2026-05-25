@@ -1,0 +1,77 @@
+:root {
+    --bg-color: #1a1a2e;
+    --card-color: #16213e;
+    --accent-color: #e94560;
+    --text-color: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#current-date {
+    color: #999;
+    font-style: italic;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tv-card {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.tv-card:hover {
+    transform: translateY(-5px);
+}
+
+.channel-badge {
+    background-color: var(--accent-color);
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.time {
+    color: #ffb423;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}
